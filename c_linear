@@ -17,15 +17,18 @@ void main()
       scanf("%d",&arr[i]);
    }
 
+   
    for(i=0;i<num-1;i++)
    {
- 
-            if(arr[i]>arr[i+1])
+           for(j=i;j<num;j++)
+       {
+            if(arr[i]>arr[j])
                 {
                     temp=arr[i];
-                    arr[i]=arr[i+1];
-                    arr[i+1]=temp;
+                    arr[i]=arr[j];
+                    arr[j]=temp;
                 }
+       }
    }
 
    printf("Sorted array\n");
